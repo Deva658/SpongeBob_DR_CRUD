@@ -13,6 +13,7 @@ namespace CRUDMahasiswaADO
 {
     public partial class Form1 : Form
     {
+        DAL dbLogic = new DAL();
         private BindingSource bindingSource = new BindingSource();
         private DataTable dtMahasiswa = new DataTable();
         private readonly string connectionString = "Data Source=DEVA\\DEPA15;Initial Catalog=DBAkademikADO;Integrated Security=True";
