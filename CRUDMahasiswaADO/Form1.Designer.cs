@@ -71,7 +71,7 @@
             this.btnCari = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnImpDb = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
             this.fotoMhs = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBAkademikADODataSet)).BeginInit();
@@ -450,14 +450,15 @@
             this.btnImpDb.Text = "Import to Database";
             this.btnImpDb.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnUpload
             // 
-            this.button7.Location = new System.Drawing.Point(398, 267);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(115, 33);
-            this.button7.TabIndex = 28;
-            this.button7.Text = "Upload Gambar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnUpload.Location = new System.Drawing.Point(398, 267);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(115, 33);
+            this.btnUpload.TabIndex = 28;
+            this.btnUpload.Text = "Upload Gambar";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // fotoMhs
             // 
@@ -473,7 +474,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.fotoMhs);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnImpDb);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnCari);
@@ -559,7 +560,7 @@
         private System.Windows.Forms.Button btnCari;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnImpDb;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.PictureBox fotoMhs;
     }
 }
