@@ -450,6 +450,7 @@
             this.btnImpDb.TabIndex = 27;
             this.btnImpDb.Text = "Import to Database";
             this.btnImpDb.UseVisualStyleBackColor = true;
+            this.btnImpDb.Click += new System.EventHandler(this.btnImpDb_Click);
             // 
             // btnUpload
             // 
