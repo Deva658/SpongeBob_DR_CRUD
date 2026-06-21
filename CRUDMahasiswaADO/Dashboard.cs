@@ -92,5 +92,24 @@ namespace CRUDMahasiswaADO
             legend.Docking = Docking.Bottom;
             chartProdi.Legends.Add(legend);
         }
+
+        private void cmbTipe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(isInitializing) return;
+
+            if(button == 1)
+            {
+            }
+            else
+            {
+                LoadDataChart();
+            }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            button = 1;
+            LoadDataChart();
+        }
     }
 }
