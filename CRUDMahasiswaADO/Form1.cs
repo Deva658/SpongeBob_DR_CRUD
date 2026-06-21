@@ -232,12 +232,14 @@ namespace CRUDMahasiswaADO
 
         private void ClearForm()
         {
+            txtNIM.Enabled = true;
             txtNIM.Clear();
             txtNama.Clear();
             cmbJK.SelectedIndex = -1;
-            dtpTanggalLahir.Value = DateTime.Now;
             txtAlamat.Clear();
             txtKodeProdi.Clear();
+            dtpTanggalLahir.Value = DateTime.Now;
+            fotoMhs.Image = null;
             txtNIM.Focus();
         }
 

@@ -72,13 +72,13 @@
             this.button5 = new System.Windows.Forms.Button();
             this.btnImpDb = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fotoMhs = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBAkademikADODataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoMhs)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -458,20 +458,20 @@
             this.button7.Text = "Upload Gambar";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // fotoMhs
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(398, 160);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 101);
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
+            this.fotoMhs.Location = new System.Drawing.Point(398, 160);
+            this.fotoMhs.Name = "fotoMhs";
+            this.fotoMhs.Size = new System.Drawing.Size(115, 101);
+            this.fotoMhs.TabIndex = 29;
+            this.fotoMhs.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.fotoMhs);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.btnImpDb);
             this.Controls.Add(this.button5);
@@ -509,7 +509,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoMhs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,7 +559,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnImpDb;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox fotoMhs;
     }
 }
 
