@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.cmbTipe = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnData = new System.Windows.Forms.Button();
             this.chartProdi = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.chartProdi)).BeginInit();
             this.SuspendLayout();
@@ -98,14 +98,15 @@
             this.cmbTipe.TabIndex = 15;
             this.cmbTipe.SelectedIndexChanged += new System.EventHandler(this.cmbTipe_SelectedIndexChanged);
             // 
-            // button2
+            // btnData
             // 
-            this.button2.Location = new System.Drawing.Point(654, 463);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Data Mahasiswa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnData.Location = new System.Drawing.Point(654, 463);
+            this.btnData.Name = "btnData";
+            this.btnData.Size = new System.Drawing.Size(121, 23);
+            this.btnData.TabIndex = 16;
+            this.btnData.Text = "Data Mahasiswa";
+            this.btnData.UseVisualStyleBackColor = true;
+            this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 
             // chartProdi
             // 
@@ -129,7 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 508);
             this.Controls.Add(this.chartProdi);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnData);
             this.Controls.Add(this.cmbTipe);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.dtpTanggalMasuk);
@@ -153,7 +154,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.ComboBox cmbTipe;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnData;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProdi;
     }
 }
