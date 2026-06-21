@@ -120,7 +120,7 @@ namespace CRUDMahasiswaADO
 
         private void btnData_Click(object sender, EventArgs e)
         {
-            DataMahasiswa frm1 = new DataMahasiswa();
+            Form1 frm1 = new Form1();
             frm1.Show();
             this.Hide();
         }

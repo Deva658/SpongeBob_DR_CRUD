@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ExcelDataReader;
 
 namespace CRUDMahasiswaADO
 {
@@ -17,6 +18,7 @@ namespace CRUDMahasiswaADO
         SqlConnection conn = new SqlConnection(connectionString);
         SqlDataAdapter da;
         DataTable dtMahasiswa;
+        DAL dbLogic = new DAL();
 
         CrystalReport1 listMahasiswa = new CrystalReport1();
         string prodi { get; set; }
@@ -32,8 +34,8 @@ namespace CRUDMahasiswaADO
             {
                 DataTable dtMahasiswa = dbLogic.getDataRekap(prodi, tglmasuk);
 
-                ListMahasiswa.SetDataSource(dtMahasiswa);
-                crystalReportViewer1.ReportSource = ListMahasiswa;
+                listMahasiswa.SetDataSource(dtMahasiswa);
+                crystalReportViewer1.ReportSource = listMahasiswa;
                 crystalReportViewer1.Refresh();
             }
             catch (Exception ex)

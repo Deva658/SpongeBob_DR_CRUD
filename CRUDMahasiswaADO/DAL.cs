@@ -11,7 +11,7 @@ namespace CRUDMahasiswaADO
     internal class DAL
     {
         static string connectionString = "Data Source=DEVA\\DEPA15;Initial Catalog=DBAkademikADO;Integrated Security=True";
-        public static string ConnectionString()
+        public string GetConnectionString()
         {
             return connectionString;
         }
@@ -118,7 +118,7 @@ namespace CRUDMahasiswaADO
             cmd.ExecuteNonQuery();
         }
 
-        public void reestData()
+        public void resetData()
         {
             if (conn.State == ConnectionState.Closed)
             {

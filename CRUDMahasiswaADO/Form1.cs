@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Services.Description;
 using System.Windows.Forms;
+using ExcelDataReader;
 
 namespace CRUDMahasiswaADO
 {
@@ -122,12 +123,12 @@ namespace CRUDMahasiswaADO
             }
             catch (SqlException ex)
             {
-                simpanLog(ex.Message);
+                SimpanLog(ex.Message);
                 MessageBox.Show("SQL Error : " + ex.Message);
             }
             catch (Exception ex)
             {
-                simpanLog(ex.Message);
+                SimpanLog(ex.Message);
                 MessageBox.Show("General Error : " + ex.Message);
             }
         }
@@ -150,19 +151,19 @@ namespace CRUDMahasiswaADO
                     }
                 }
                 byte[] imgBytes = ConvertImageToBytes(fotoMhs);
-                dbLogic.Inserths(txtNIM.Text, txtNama.Text, txtAlamat.Text, cmbJK.Text, dtpTanggalLahir.Value.Date, txtKodeProdi.Text, imgBytes);
+                dbLogic.InsertMhs(txtNIM.Text, txtNama.Text, txtAlamat.Text, cmbJK.Text, dtpTanggalLahir.Value.Date, txtKodeProdi.Text, imgBytes);
                 MessageBox.Show("Data mahasiswa berhasil ditambahkan");
                 ClearForm();
                 LoadData();
             }
             catch (SqlException ex)
             {
-                simpanLog("Rollback Insert : " + ex.Message);
+                SimpanLog("Rollback Insert : " + ex.Message);
                 MessageBox.Show("SQL Error : " + ex.Message);
             }
             catch (Exception ex)
             {
-                simpanLog("General Error : " + ex.Message);
+                SimpanLog("General Error : " + ex.Message);
                 MessageBox.Show("General Error : " + ex.Message);
             }
         }
@@ -177,12 +178,12 @@ namespace CRUDMahasiswaADO
             }
             catch (SqlException ex)
             {
-                simpanLog(ex.Message);
+                SimpanLog(ex.Message);
                 MessageBox.Show("SQL Error : " + ex.Message);
             }
             catch (Exception ex)
             {
-                simpanLog(ex.Message);
+                SimpanLog(ex.Message);
                 MessageBox.Show("General Error : " + ex.Message);
             }
         }
@@ -191,25 +192,25 @@ namespace CRUDMahasiswaADO
         {
             try
             {
-                dbLogic.testInject(txtNIM.Text);
+                dbLogic.testInjection(txtNIM.Text);
                 LoadData();
             }
             catch (SqlException ex)
             {
                 if (ex.Message.Contains("safe"))
                 {
-                    simpanLog(ex.Message);
+                    SimpanLog(ex.Message);
                     MessageBox.Show("SQL Error : Unsafe UPDATE operation not allowed");
                 }
                 else
                 {
-                    simpanLog(ex.Message);
+                    SimpanLog(ex.Message);
                     MessageBox.Show("SQL Error : " + ex.Message);
                 }
             }
             catch (Exception ex)
             {
-                simpanLog(ex.Message);
+                SimpanLog(ex.Message);
                 MessageBox.Show("General Error : " + ex.Message);
             }
         }
@@ -240,19 +241,19 @@ namespace CRUDMahasiswaADO
                     }
                 }
                 byte[] imgBytes = ConvertImageToBytes(fotoMhs);
-                dbLogic.Updateths(txtNIM.Text, txtNama.Text, txtAlamat.Text, cmbJK.Text, dtpTanggalLahir.Value.Date, txtKodeProdi.Text, imgBytes);
+                dbLogic.UpdateMhs(txtNIM.Text, txtNama.Text, txtAlamat.Text, cmbJK.Text, dtpTanggalLahir.Value.Date, txtKodeProdi.Text, imgBytes);
                 MessageBox.Show("Data mahasiswa berhasil diubah");
                 ClearForm();
                 btnLoad.PerformClick();
             }
             catch (SqlException ex)
             {
-                simpanLog(ex.Message);
+                SimpanLog(ex.Message);
                 MessageBox.Show("SQL Error : " + ex.Message);
             }
             catch (Exception ex)
             {
-                simpanLog(ex.Message);
+                SimpanLog(ex.Message);
                 MessageBox.Show("General Error : " + ex.Message);
             }
         }
@@ -276,12 +277,12 @@ namespace CRUDMahasiswaADO
             }
             catch (SqlException ex)
             {
-                simpanLog(ex.Message);
+                SimpanLog(ex.Message);
                 MessageBox.Show("SQL Error : " + ex.Message);
             }
             catch (Exception ex)
             {
-                simpanLog(ex.Message);
+                SimpanLog(ex.Message);
                 MessageBox.Show("General Error : " + ex.Message);
             }
         }
@@ -408,7 +409,7 @@ namespace CRUDMahasiswaADO
                     }
 
                     byte[] fotoBytes = ConvertImageFromPath(fotoPath);
-                    dbLogic.Inserths(nim, nama, alamat, jk, tglLahir, kodeProdi, fotoBytes);
+                    dbLogic.InsertMhs(nim, nama, alamat, jk, tglLahir, kodeProdi, fotoBytes);
                     sukses++;
                 }
 
@@ -418,12 +419,12 @@ namespace CRUDMahasiswaADO
             }
             catch (SqlException ex)
             {
-                simpanLog("Rollback Insert : " + ex.Message);
+                SimpanLog("Rollback Insert : " + ex.Message);
                 MessageBox.Show("SQL Error : " + ex.Message);
             }
             catch (Exception ex)
             {
-                simpanLog("General Error : " + ex.Message);
+                SimpanLog("General Error : " + ex.Message);
                 MessageBox.Show("General Error : " + ex.Message);
             }
         }

@@ -21,6 +21,7 @@ namespace CRUDMahasiswaADO
         SqlConnection conn = new SqlConnection(connectionString);
         SqlDataAdapter da;
         DataTable dtMahasiswa;
+        DAL dbLogic = new DAL();
 
         string prodi { get; set; }
         DateTime tglMasuk { get; set; }
