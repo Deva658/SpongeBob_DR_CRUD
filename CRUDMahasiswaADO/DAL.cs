@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,12 +12,12 @@ namespace CRUDMahasiswaADO
 {
     internal class DAL
     {
-        static string connectionString = "Data Source=DEVA\\DEPA15;Initial Catalog=DBAkademikADO;Integrated Security=True";
-        public string GetConnectionString()
+        public static string GetConnectionString()
         {
+            string connectionString = $"Data Source={GetLocalIPAddress()},1433;Initial Catalog=DBAkademikADO;Integrated Security=True;";
             return connectionString;
         }
-        SqlConnection conn = new SqlConnection(connectionString);
+        SqlConnection conn = new SqlConnection(GetConnectionString());
 
         SqlDataAdapter da;
         DataTable dtProdi;
