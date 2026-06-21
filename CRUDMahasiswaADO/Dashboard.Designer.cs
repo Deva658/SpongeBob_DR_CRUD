@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dtpTanggalMasuk = new System.Windows.Forms.DateTimePicker();
             this.btnLoad = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.cmbTipe = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.chartProdi = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -79,14 +79,15 @@
             this.label1.Text = "REKAP DATA MAHASISWA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
+            // btnReset
             // 
-            this.button1.Location = new System.Drawing.Point(470, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnReset.Location = new System.Drawing.Point(470, 56);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 14;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // cmbTipe
             // 
@@ -108,16 +109,16 @@
             // 
             // chartProdi
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartProdi.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartProdi.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.chartProdi.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartProdi.Legends.Add(legend2);
             this.chartProdi.Location = new System.Drawing.Point(106, 98);
             this.chartProdi.Name = "chartProdi";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartProdi.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartProdi.Series.Add(series2);
             this.chartProdi.Size = new System.Drawing.Size(669, 359);
             this.chartProdi.TabIndex = 17;
             this.chartProdi.Text = "chart1";
@@ -130,7 +131,7 @@
             this.Controls.Add(this.chartProdi);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cmbTipe);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.dtpTanggalMasuk);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.label3);
@@ -150,7 +151,7 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.ComboBox cmbTipe;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProdi;
