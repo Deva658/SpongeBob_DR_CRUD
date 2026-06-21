@@ -260,33 +260,30 @@ namespace CRUDMahasiswaADO
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                DialogResult resultConfire = MessageBox.Show(
-                    "akin ingin menghapus data?", 
-                    "Konfirmasi", 
-                    MessageBoxButtons.YesNo, 
+                DialogResult dg = MessageBox.Show(
+                    "Yakin ingin menghapus data?",
+                    "Konfirmasi",
+                    MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
-                if (resultConfire == DialogResult.Yes)
+                if (dg == DialogResult.Yes)
                 {
-                  
-                    using (SqlCommand cmd = new SqlCommand("sp_DeleteMahasiswa", conn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@NIM", SqlDbType.Char, 11).Value = txtNIM.Text;
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected < 0)
-                            MessageBox.Show("Data berhasil dihapus");
-                        else
-                            MessageBox.Show("Data tidak ditemukan");
-
-                        if (conn.State == ConnectionState.Open)
-                        {
-                            conn.Close();
-                        }
-                    }
+                    dbLogic.DeleteMhs(txtNIM.Text);
+                    MessageBox.Show("Data mahasiswa berhasil dihapus");
+                    ClearForm();
+                    btnLoad.PerformClick();
                 }
+            }
+            catch (SqlException ex)
+            {
+                simpanLog(ex.Message);
+                MessageBox.Show("SQL Error : " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                simpanLog(ex.Message);
+                MessageBox.Show("General Error : " + ex.Message);
             }
         }
 
