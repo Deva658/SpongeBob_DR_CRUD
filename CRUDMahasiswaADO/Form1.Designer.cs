@@ -69,7 +69,7 @@
             this.btnRekapData = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCari = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnImpExcel = new System.Windows.Forms.Button();
             this.btnImpDb = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
             this.fotoMhs = new System.Windows.Forms.PictureBox();
@@ -432,14 +432,15 @@
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnImpExcel
             // 
-            this.button5.Location = new System.Drawing.Point(696, 38);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(92, 42);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "Import Form Excel";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnImpExcel.Location = new System.Drawing.Point(696, 38);
+            this.btnImpExcel.Name = "btnImpExcel";
+            this.btnImpExcel.Size = new System.Drawing.Size(92, 42);
+            this.btnImpExcel.TabIndex = 26;
+            this.btnImpExcel.Text = "Import Form Excel";
+            this.btnImpExcel.UseVisualStyleBackColor = true;
+            this.btnImpExcel.Click += new System.EventHandler(this.btnImpExcel_Click);
             // 
             // btnImpDb
             // 
@@ -476,7 +477,7 @@
             this.Controls.Add(this.fotoMhs);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnImpDb);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnImpExcel);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRekapData);
@@ -558,7 +559,7 @@
         private System.Windows.Forms.Button btnRekapData;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCari;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnImpExcel;
         private System.Windows.Forms.Button btnImpDb;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.PictureBox fotoMhs;
