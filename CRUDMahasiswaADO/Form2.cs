@@ -18,6 +18,7 @@ namespace CRUDMahasiswaADO
         SqlDataAdapter da;
         DataTable dtMahasiswa;
         DataTable dtProdi;
+        DAL dbLogic = new DAL();
         public Form2()
         {
             InitializeComponent();
